@@ -89,18 +89,26 @@ namespace DrinkVendingMachineSimulator
         {
             try
             {
-                rootBeer.drinkName = "Root Beer";
-                rootBeer.drinkCost = 1.00;
-                rootBeer.numOfDrinksInMachine = rootBeerTotal;
+                if (rootBeerTotal > 0)
+                {
+                    rootBeer.drinkName = "Root Beer";
+                    rootBeer.drinkCost = 1.00;
+                    rootBeer.numOfDrinksInMachine = rootBeerTotal;
 
-                drinkOptions.Add(rootBeer);
+                    drinkOptions.Add(rootBeer);
 
-                rootBeer.numOfDrinksInMachine -= 1;
-                rootBeerTotal--;
-                lblRootBeerQuantity.Text = (rootBeer.numOfDrinksInMachine).ToString();
+                    rootBeer.numOfDrinksInMachine -= 1;
+                    rootBeerTotal--;
+                    lblRootBeerQuantity.Text = (rootBeer.numOfDrinksInMachine).ToString();
 
-                sodaTotal+=rootBeer.drinkCost;
-                lblTotalSales.Text = sodaTotal.ToString("c");
+                    sodaTotal += rootBeer.drinkCost;
+                    lblTotalSales.Text = sodaTotal.ToString("c");
+                }
+                else
+                {
+                    MessageBox.Show("Sold Out.");
+                }
+                
             }
             catch
             {
@@ -112,18 +120,26 @@ namespace DrinkVendingMachineSimulator
         {
             try
             {
-                lemonLime.drinkName = "Lemon Lime";
-                lemonLime.drinkCost = 1.00;
-                lemonLime.numOfDrinksInMachine = lemonLimeTotal;
+                if(lemonLimeTotal> 0)
+                {
+                    lemonLime.drinkName = "Lemon Lime";
+                    lemonLime.drinkCost = 1.00;
+                    lemonLime.numOfDrinksInMachine = lemonLimeTotal;
 
-                drinkOptions.Add(lemonLime);
+                    drinkOptions.Add(lemonLime);
 
-                lemonLime.numOfDrinksInMachine -= 1;
-                lemonLimeTotal--;
-                lblLemonLimeQuantity.Text = (lemonLime.numOfDrinksInMachine).ToString();
+                    lemonLime.numOfDrinksInMachine -= 1;
+                    lemonLimeTotal--;
+                    lblLemonLimeQuantity.Text = (lemonLime.numOfDrinksInMachine).ToString();
 
-                sodaTotal+=lemonLime.drinkCost;
-                lblTotalSales.Text = sodaTotal.ToString("c");
+                    sodaTotal += lemonLime.drinkCost;
+                    lblTotalSales.Text = sodaTotal.ToString("c");
+                }
+                else
+                {
+                    MessageBox.Show("Sold Out");
+                }
+                
             }
             catch
             {
@@ -135,18 +151,26 @@ namespace DrinkVendingMachineSimulator
         {
             try
             {
-                grapeSoda.drinkName = "Grape Soda";
-                grapeSoda.drinkCost = 1.50;
-                grapeSoda.numOfDrinksInMachine = grapeSodaTotal;
+                if (grapeSodaTotal > 0)
+                {
+                    grapeSoda.drinkName = "Grape Soda";
+                    grapeSoda.drinkCost = 1.50;
+                    grapeSoda.numOfDrinksInMachine = grapeSodaTotal;
 
-                drinkOptions.Add(grapeSoda);
+                    drinkOptions.Add(grapeSoda);
 
-                grapeSoda.numOfDrinksInMachine -= 1;
-                grapeSodaTotal--;
-                lblGrapeSodaQuantity.Text = (grapeSoda.numOfDrinksInMachine).ToString();
+                    grapeSoda.numOfDrinksInMachine -= 1;
+                    grapeSodaTotal--;
+                    lblGrapeSodaQuantity.Text = (grapeSoda.numOfDrinksInMachine).ToString();
 
-                sodaTotal+=grapeSoda.drinkCost;
-                lblTotalSales.Text = sodaTotal.ToString("c");
+                    sodaTotal += grapeSoda.drinkCost;
+                    lblTotalSales.Text = sodaTotal.ToString("c");
+                }
+                else
+                {
+                    MessageBox.Show("Sold Out");
+                }
+                
             }
             catch
             {
@@ -158,18 +182,26 @@ namespace DrinkVendingMachineSimulator
         {
             try
             {
-                creamSoda.drinkName = "Cream Soda";
-                creamSoda.drinkCost = 1.50;
-                creamSoda.numOfDrinksInMachine = creamSodaTotal;
+                if(creamSodaTotal > 0)
+                {
+                    creamSoda.drinkName = "Cream Soda";
+                    creamSoda.drinkCost = 1.50;
+                    creamSoda.numOfDrinksInMachine = creamSodaTotal;
 
-                drinkOptions.Add(creamSoda);
+                    drinkOptions.Add(creamSoda);
 
-                creamSoda.numOfDrinksInMachine -= 1;
-                creamSodaTotal--;
-                lblCreamSodaQuantity.Text = (creamSoda.numOfDrinksInMachine).ToString();
+                    creamSoda.numOfDrinksInMachine -= 1;
+                    creamSodaTotal--;
+                    lblCreamSodaQuantity.Text = (creamSoda.numOfDrinksInMachine).ToString();
 
-                sodaTotal+= creamSoda.drinkCost;
-                lblTotalSales.Text = sodaTotal.ToString("c");
+                    sodaTotal += creamSoda.drinkCost;
+                    lblTotalSales.Text = sodaTotal.ToString("c");
+                }
+                else
+                {
+                    MessageBox.Show("Sold Out.");
+                }
+                
             }
             catch
             {
